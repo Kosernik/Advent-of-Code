@@ -1,4 +1,3 @@
-import kotlin.math.max
 
 fun main() {
     val input: List<String> = readInput("Day05")
@@ -101,8 +100,8 @@ fun getMaxSize(coordinates: List<Pair<Pair<Int, Int>, Pair<Int, Int>>>): Pair<In
     var maxY = 0
 
     for (pair: Pair<Pair<Int, Int>, Pair<Int, Int>> in coordinates) {
-        maxX = max(maxX, max(pair.first.first, pair.second.first))
-        maxY = max(maxY, max(pair.first.second, pair.second.second))
+        maxX = Math.max(maxX, Math.max(pair.first.first, pair.second.first))
+        maxY = Math.max(maxY, Math.max(pair.first.second, pair.second.second))
     }
 
     return Pair(maxX, maxY)
