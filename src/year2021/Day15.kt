@@ -1,3 +1,6 @@
+package year2021
+
+import readInput
 import java.util.*
 import kotlin.Comparator
 import kotlin.collections.HashSet

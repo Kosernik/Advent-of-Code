@@ -1,3 +1,7 @@
+package year2021
+
+import readInput
+
 fun main() {
     val input: List<String> = readInput("Day09")
 

@@ -1,3 +1,7 @@
+package year2021
+
+import readInput
+
 fun main() {
 
     fun countIncreases(input: List<String>) :Int {

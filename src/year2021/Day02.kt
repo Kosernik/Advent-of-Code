@@ -1,3 +1,7 @@
+package year2021
+
+import readInput
+
 /**
  * Calculates the product of submarine`s horizontal travel by depth
  */

@@ -1,3 +1,6 @@
+package year2021
+
+import readInput
 import kotlin.math.max
 import kotlin.math.min
 
@@ -9,10 +12,10 @@ fun main() {
 
 //     Puzzle 1
 //    for (i in 0 until 10) {
-//        polymer = buildPolymer(polymer, mapping)
+//        polymer = year2021.buildPolymer(polymer, mapping)
 //    }
 //
-//    val minMax = getHighAndLowString(polymer)
+//    val minMax = year2021.getHighAndLowString(polymer)
 //    println(minMax.first - minMax.second)
 
     var polyMap: MutableMap<String, Long> = convertToPairs(input[0])

@@ -1,3 +1,5 @@
+package year2021;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -8,7 +10,7 @@ public class Day12 {
     public static void main(String[] args) {
         Day12 solution = new Day12();
 
-        List<String> input = parseInput("Day12");
+        List<String> input = parseInput("year2021.Day12");
 
         Map<String, Cave> tst = solution.createGraph(input);
 

@@ -1,3 +1,7 @@
+package year2021
+
+import readInput
+
 /**
  * Computes the power consumption.
  */

@@ -1,3 +1,6 @@
+package year2021
+
+import readInput
 import java.util.*
 
 fun main() {
@@ -6,7 +9,7 @@ fun main() {
 
     prntTable(table)
 
-//    println(getTotalNumberOfFlashes(table, 100))
+//    println(year2021.getTotalNumberOfFlashes(table, 100))
     println(getFirstAllFlash(table))
 }
 

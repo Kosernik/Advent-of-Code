@@ -1,3 +1,6 @@
+package year2021
+
+import readInput
 import kotlin.math.abs
 import kotlin.math.min
 

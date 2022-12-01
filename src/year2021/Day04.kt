@@ -1,3 +1,7 @@
+package year2021
+
+import readInput
+
 // Возвращает список вытянутых номеров в порядке выпадания.
 fun getNumbers(input: List<String>): List<Int> {
     val listOfNumbers = mutableListOf<Int>()

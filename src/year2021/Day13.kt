@@ -1,3 +1,6 @@
+package year2021
+
+import readInput
 import kotlin.math.max
 
 fun main() {
@@ -10,8 +13,8 @@ fun main() {
     val table: MutableList<MutableList<Byte>> = fillTable(dimensions, dots)
 
     // Puzzle 1
-//    foldOneAxis(table, folds[0])
-//    println(countDots(table))
+//    year2021.foldOneAxis(table, folds[0])
+//    println(year2021.countDots(table))
 
     // Puzzle 2
     for (fold in folds) {
