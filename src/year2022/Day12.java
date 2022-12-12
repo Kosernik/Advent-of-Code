@@ -6,11 +6,19 @@ public class Day12 {
 
     public static void main(String[] args) {
         List<String> inputData = ReadFileUtil.readFile("src/year2022/Day12.txt");
+        char[][] map = convertInput(inputData);
 
-        System.out.println(task1(inputData));
+        System.out.println(task1(map));
     }
 
-    private static int task1(List<String> inputData) {
+    private static int task1(char[][] map) {
+        int[] startCoordinates = getCoordinates(map, 'S');
+        int[] finishCoordinates = getCoordinates(map, 'E');
+
+        return bfs(map, startCoordinates, finishCoordinates);
+    }
+
+    private static char[][] convertInput(List<String> inputData) {
         char[][] map = new char[inputData.size()][];
         int idx = 0;
         for (String line : inputData) {
@@ -18,10 +26,7 @@ public class Day12 {
             idx++;
         }
 
-        int[] startCoordinates = getCoordinates(map, 'S');
-        int[] finishCoordinates = getCoordinates(map, 'E');
-
-        return bfs(map, startCoordinates, finishCoordinates);
+        return map;
     }
 
     private static int bfs(char[][] map, int[] startCoordinates, int[] finishCoordinates) {
@@ -30,7 +35,7 @@ public class Day12 {
         map[startCoordinates[0]][startCoordinates[1]] = 'a';
         map[finishCoordinates[0]][finishCoordinates[1]] = 'z';
 
-        int[] neighbours = {0,1,0,-1,0};
+        int[] neighbours = {0, 1, 0, -1, 0};
 
         Deque<int[]> queue = new ArrayDeque<>();
         queue.offer(startCoordinates);
@@ -50,7 +55,7 @@ public class Day12 {
 
                 for (int n = 0; n < 4; n++) {
                     int nextX = curCoordinates[0] + neighbours[n];
-                    int nextY = curCoordinates[1] + neighbours[n+1];
+                    int nextY = curCoordinates[1] + neighbours[n + 1];
                     if (nextX < 0 || nextY < 0 || nextX >= map.length || nextY >= map[0].length) {
                         continue;
                     }
@@ -76,7 +81,7 @@ public class Day12 {
         for (int row = 0; row < map.length; row++) {
             for (int col = 0; col < map[0].length; col++) {
                 if (map[row][col] == target) {
-                    return new int[] {row, col};
+                    return new int[]{row, col};
                 }
             }
         }
