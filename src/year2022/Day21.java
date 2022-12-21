@@ -21,9 +21,7 @@ public class Day21 {
     }
 
     private long dfs(Monkey monkey, Map<Monkey, Long> monkeysWithNumbers) {
-//        System.out.print("Monkey " + monkey.name + " ");  //  TEST OUTPUT
         if (monkeysWithNumbers.containsKey(monkey)) {
-//            System.out.println(monkeysWithNumbers.get(monkey)); //  TEST OUTPUT
             return monkeysWithNumbers.get(monkey);
         }
         long first = dfs(monkey.first, monkeysWithNumbers);
@@ -33,7 +31,6 @@ public class Day21 {
         long number = doOperation(first, second, monkey.operation);
         monkey.number = number;
         monkeysWithNumbers.put(monkey, number);
-//        System.out.println(monkeysWithNumbers.get(monkey)); //  TEST OUTPUT
         return number;
     }
 
@@ -56,10 +53,6 @@ public class Day21 {
         //  cczh: sllz + lgvd
         for (String line : inputData) {
             String[] splitLine = line.split("\\s+");
-//            for (String spl : splitLine) {    //  TEST OUTPUT
-//                System.out.print(spl + "|");  //  TEST OUTPUT
-//            }                                 //  TEST OUTPUT
-//            System.out.println();             //  TEST OUTPUT
 
             String monkeyName = splitLine[0].substring(0, splitLine[0].length()-1);
             Monkey monkey = getOrCreate(monkeyName, monkeys);
